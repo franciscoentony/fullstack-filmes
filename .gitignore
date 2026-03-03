@@ -1,0 +1,27 @@
+# GITIGNORE - O que o Git deve ignorar
+# Este arquivo diz ao Git para não "rastrear" certas pastas e arquivos.
+
+# 1. Dependências (São muito pesadas e podem ser instaladas com 'npm install')
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# 2. Variáveis de Ambiente (SEGURANÇA! Nunca envie suas senhas para o GitHub)
+.env
+.env.local
+.env.*.local
+frontend/.env
+backend/.env
+
+# 3. Pastas de Build (Produção)
+dist/
+build/
+.next/
+out/
+
+# 4. Logs e Arquivos temporários
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
