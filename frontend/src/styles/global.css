@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --color-brand-bg: #0d0b14;
+  --color-brand-card: #151121;
+  --color-brand-input: #1b172a;
+
+  --color-brand-primary: #8b3dff;
+  --color-brand-primary-hover: #7b2df0;
+
+  --color-brand-border: #262137;
+
+  --color-brand-text-primary: #ffffff;
+  --color-brand-text-secondary: #a19ea8;
+
+  --color-brand-danger: #ff4747;
+  --color-brand-success: #0df07b;
+  --color-brand-warning: #f5a623;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-body bg-brand-bg text-brand-text-primary antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  /* Animações Customizadas */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
