@@ -1,5 +1,7 @@
 # Gerenciador de Filmes - Fullstack
 
+> Última atualização: Configuração de deploy backend concluída.
+
 Este repositório contém o projeto unificado (Frontend + Backend) para facilitar o gerenciamento e deploy.
 
 ## Estrutura de Pastas
