@@ -279,11 +279,7 @@ function MovieRow({ title, icon, movies, user, onDelete }) {
                 category={movie.genero || movie.category}
                 year={movie.ano || movie.year}
                 rating={Number(movie.rating) || 0}
-                coverImage={
-                  movie.capa 
-                    ? (movie.capa.startsWith('http') ? movie.capa : `http://localhost:4000/uploads/${movie.capa}`) 
-                    : 'https://placehold.co/600x900/1b172a/a19ea8?text=Sem+Capa'
-                } 
+                coverImage={getUploadUrl(movie.capa)} 
                 onDelete={user?.isSuperUser ? onDelete : undefined}
               />
             </div>
